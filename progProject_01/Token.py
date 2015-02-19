@@ -1,8 +1,4 @@
-from enum import Enum, unique
-
-
-@unique
-class TokenCode(Enum):
+class TokenCode:
     ID = 1
     ASSIGN = 2
     SEMICOL = 3
@@ -16,6 +12,9 @@ class TokenCode(Enum):
     END = 11
     ERROR = 12
 
+    def __str__(self):
+        return str(self.name)
+
 
 class Token:
     def __init__(self, lexeme, token_code):
@@ -23,4 +22,4 @@ class Token:
         self.lexeme = lexeme
 
     def __str__(self):
-        return self.lexeme + " " + self.tCode
+        return 'Lexeme:{0} TokenCode:{1}'.format(self.lexeme, self.tCode)
