@@ -20,7 +20,6 @@ class Parser:
 
     def get_next_token(self):
         self.token = self.lexer.next_token()
-        # print(str(self.token))
 
     def statement(self):
         if self.token.tCode is TokenCode.ID:

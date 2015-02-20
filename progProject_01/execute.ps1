@@ -1,0 +1,1 @@
+cat $args[0] | python .\Compiler.py | python .\Interpreter.py

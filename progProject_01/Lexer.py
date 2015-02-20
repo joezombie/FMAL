@@ -16,7 +16,6 @@ class Lexer:
             split = self.splitter.split(line)
             for s in split:
                 if s != ' ' and s != '\n' and len(s) > 0:
-                    # print(s)
                     self.lexemes.append(s)
         self.next_id = 0
 
