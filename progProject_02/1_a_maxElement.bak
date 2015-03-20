@@ -1,0 +1,9 @@
+(define (maxElement lis)
+	(let ((e1 (car lis))))
+	(if (null? (cdr lis)) (e1)
+		(
+			(let ((e2 (maxElement (cdr lis)))))
+			(if (> e1 e2) e1 e2)
+		)
+	)
+)
